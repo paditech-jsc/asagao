@@ -1,0 +1,17 @@
+<% @page_title = '私の活動' %>
+<%  @side_bar_template_name = 'side_bar' %>
+<div  id="main">
+<h1><%= h(@page_title) %></h1>
+<h2>ちむ紹介</h2>
+<ul>
+  <li>練習場所</li>
+  <li>練習時間  毎週○毎日の○から○時まで</li>
+  <li>メンバー数:  <%=@number_of_members %>人</li>
+</ul>
+</div>
+<%  3.times do  |x| %>
+  <h2>midashi</h2>
+  <p>ここ日本文が入ります。ここ日本文が入ります。ここ日本文が入ります。ここ日本文が入ります。</p>
+  <p>ここ日本文が入ります。ここ日本文が入ります。ここ日本文が入ります。ここ日本文が入ります。</p>
+<%  end %>
+

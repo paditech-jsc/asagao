@@ -1,0 +1,17 @@
+<%  menu_items  = [
+  { :link =>  { :controller =>  '/main',  :action  =>  'index' },  :name =>  'TOP'},
+  { :link =>  { :controller =>  '/main',  :action  =>  'activities' },  :name =>  'Activities'},
+  { :link =>  { :controller =>  '/main',  :action  =>  'news' },  :name =>  'News'},
+  { :link =>  { :controller =>  '/main',  :action  =>  'activities'},  :name =>  'Activities'},
+  { :link =>  { :controller =>  '/blog_entries',  :action  =>  'index'},  :name =>  'Blog',  :disabled  =>  true},
+  { :link =>  { :controller =>  '/member',  :action  =>  'index'},  :name =>  'Staff Name',  :disabled  =>  true},
+  { :link =>  { :controller =>  '/admin/main',  :action  =>  'index'},  :name =>  'Admin page',  :disabled  =>  true}
+  ] %>
+
+<div  id="menu_bar">
+  <%  menu_items.each_with_index  do  |item,index|  %>
+  <%  if  index > 0 %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<% end %>
+  <%=  menu_link_to  item  %>
+<%  end %>
+</div>
+

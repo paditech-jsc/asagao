@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+body  {
+  background-color: white;
+  color:  black;
+  margin:  0;
+  padding:  0;
+}
+
+/*  link  */
+a:link  {
+  color: blue;
+}
+
+/*  全体の枠  */
+div#container {
+  background-color: white;
+  margin: 0 auto;
+  padding:  5px 0 0;
+  width: 760px;
+}
+/* ヘッダー*/
+div#header  {
+  padding-top:  4px;
+  border-top: 4px solid #6bb;
+}
+/* 左の枠（コンテンシを入れる）*/
+div#left  {
+  float:left;
+  width:  520px;
+  padding:  6px 6px 6px 0;
+}
+/* 右の枠 (サイドバーを入れる)　*/
+div#right {
+  float:left;
+  width:  228px;
+  background-color: #e8ffff;
+  padding:  6px 0px 6px 6px;
+}
+
+/* メニューダーのリンク　*/
+div#menu_bar  a{
+  text-decoration:none;
+}
+div#menu_bar  a:link  {
+  color:  #ccc;
+}
+div#menu_bar  a:visited {
+  color:  #ecc;
+}
+

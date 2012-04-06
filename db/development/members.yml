@@ -1,0 +1,21 @@
+#開発環境のためのフイクスチャ
+<%  fname = ['田中', '中島', '松本', '藤本', '村田']
+    gnames  = ['太郎 ','宏 ','花子 ','畠山  ']
+    ffuriganas  = ['たなか','なかじま','ふじもと','まつもと','むらた']
+    gfuriganas  = ['たろう','ひろし','はなこ','ひろたけ']　%>
+<% 1.upto(10) do |idx| %>
+member<%= idx %>
+id: <%=  idx %>
+member_number: <%= idx + 10  %>
+player: <%=  idx %8== 0? 'false' : 'true' %>
+family_name:  <%=  fnames[(idx - 1)  % 5]  %>
+given_name: <%= gnames[(idx - 1)  % 4]  %>
+furigana: <%= ffuriganas[(idx - 1)  %5] + gfuriganas[(idx -1) %4] %>
+email:  <%= sprintf("@02d@asagao.jp", "idx")  %>
+phone:  000-00000-0000
+birthday: 10343-234934
+sex:  <%= (idx  - 1)%3 <2 ? 0:1 %>
+created_at: <%= Time.now.strftime("%Y - %m  -%d %H  %M  %S")  %>
+updated_at: <%= Time.now.strftime("%Y - %m  -%d %H  %M  %S")  %>
+<%  end %>
+
